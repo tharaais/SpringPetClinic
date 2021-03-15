@@ -65,6 +65,12 @@
           <scope>test</scope>
   <type>maven-plugin</type>
 </dependency>
+      <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
 
     <!-- Databases - Uses HSQL by default -->
     <dependency>

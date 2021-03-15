@@ -113,11 +113,11 @@
       
       
       <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.3.1</version>
-            <scope>test</scope>
-        </dependency>
+    <groupId>your-junit-listener-artifact-groupid</groupId>
+    <artifactId>your-junit-listener-artifact-artifactid</artifactId>
+    <version>your-junit-listener-artifact-version</version>
+    <scope>test</scope>
+  </dependency>
       
       
   </dependencies>
@@ -127,15 +127,18 @@
         
         
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
-        <configuration>
-          <parallel>methods</parallel>
-          <threadCount>10</threadCount>
-        </configuration>
-      </plugin>
-        
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M5</version>
+    <configuration>
+      <properties>
+        <property>
+          <name>listener</name>
+          <value>com.mycompany.MyResultListener,com.mycompany.MyResultListener2</value>
+        </property>
+      </properties>
+    </configuration>
+  </plugin>
         
         
       <plugin>
